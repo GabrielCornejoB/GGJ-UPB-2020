@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {          
             rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
             isJumping = true;
