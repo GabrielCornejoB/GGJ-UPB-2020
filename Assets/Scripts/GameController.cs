@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+<<<<<<< HEAD
+    
+=======
     public GameObject[] Stages;
     public Vector3 spawnValues;
 
@@ -15,28 +19,21 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(SpawnStages());
     }
 
     void Update()
     {
-        
+        // StartCoroutine(SpawnStages());        
     }
 
     IEnumerator SpawnStages ()
     {
-        yield return new WaitForSeconds(startWait);
-        while (true)
-        {
-            for (int i = 0; 1 < stagesCount; i++)
-            {
-                GameObject Stage = Stages[Random.Range(0, Stages.Length)];
-
-                Vector3 spawnPosition = new Vector3(spawnValues.x, spawnValues.y, spawnValues.z);
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(Stage, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
-            }
-        }
+        
+        GameObject Stage = Stages[0];
+        Vector3 spawnPosition = new Vector3(spawnValues.x, spawnValues.y, spawnValues.z);
+        Quaternion spawnRotation = Quaternion.identity;
+        Instantiate(Stage, spawnPosition, spawnRotation);
+        yield return new WaitForSeconds(waveWait);
     }
+>>>>>>> f9abee489bb629a514551fab7ede75ec62dd7a67
 }
