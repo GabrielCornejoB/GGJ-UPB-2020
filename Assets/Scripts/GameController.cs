@@ -19,16 +19,16 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        StartCoroutine(SpawnStages());        
+        // StartCoroutine(SpawnStages());        
     }
 
     IEnumerator SpawnStages ()
     {
-        yield return new WaitForSeconds(waveWait);
-        GameObject Stage = Stages[Random.Range(0, Stages.Length)];
+        
+        GameObject Stage = Stages[0];
         Vector3 spawnPosition = new Vector3(spawnValues.x, spawnValues.y, spawnValues.z);
         Quaternion spawnRotation = Quaternion.identity;
         Instantiate(Stage, spawnPosition, spawnRotation);
-        
+        yield return new WaitForSeconds(waveWait);
     }
 }
