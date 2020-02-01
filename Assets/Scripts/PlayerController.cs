@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
 
     public BoxCollider2D col;
-    const float ySize = 10f;
-    const float newOffset = 1.4f;
+    const float ySize = 6.7f;
+    const float newOffset = 0.7f;
 
     public int curRepair;
     public int maxRepair = 3;
@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     bool damaged;
     public int repairValue = 1;
     public int damageValue = 1;
+
+    public Transform GateOut;   
 
     public Rigidbody2D rb;
 
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
     }
 
+
     private void FixedUpdate()
     {   
         Jump();
@@ -43,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.Space)) //&& !isJumping)
         {          
             rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
             isJumping = true;
@@ -57,6 +60,11 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
             
             rb.velocity = Vector2.zero;
+        }
+
+        if(other.gameObject.CompareTag("PortalIda"))
+        {
+            rb.position = GateOut.position;
         }
     }
 
