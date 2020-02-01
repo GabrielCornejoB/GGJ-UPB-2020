@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Grounds.meta
 guid: f54707baf9aa10943a16715eefa2705c
+=======
+guid: 53e07cfd6baf5b74eb21de28b36cab2a
+>>>>>>> e4cef61e63d521754c1f1cf43a3bd21c47b8280d:Assets/Prefabs/Stages.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

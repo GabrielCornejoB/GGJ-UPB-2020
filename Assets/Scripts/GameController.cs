@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+<<<<<<< HEAD
+    
+=======
     public GameObject[] Stages;
     public Vector3 spawnValues;
 
@@ -31,4 +35,5 @@ public class GameController : MonoBehaviour
         Instantiate(Stage, spawnPosition, spawnRotation);
         yield return new WaitForSeconds(waveWait);
     }
+>>>>>>> f9abee489bb629a514551fab7ede75ec62dd7a67
 }
