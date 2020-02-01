@@ -16,6 +16,9 @@ public class HUDHealth : MonoBehaviour
 
     private void Update()
     {
-        TuercaUI.sprite = spritesTuercas[playerController.curRepair];
+        if (playerController.curRepair <= playerController.maxRepair)
+        {
+            TuercaUI.sprite = spritesTuercas[playerController.curRepair];
+        }
     }
 }

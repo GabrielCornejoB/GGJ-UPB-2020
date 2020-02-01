@@ -24,11 +24,14 @@ public class PlayerController : MonoBehaviour
     public Transform GateOut;   
 
     public Rigidbody2D rb;
+    private Animator anim;
 
     private void Start()
     {        
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
+
+        anim = GetComponentInChildren<Animator>();
 
         curRepair = 0;
     }
@@ -46,10 +49,12 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) //&& !isJumping)
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {          
             rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
             isJumping = true;
+
+            anim.SetTrigger("Jump");
         }
     }
     
@@ -72,9 +77,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PickUp"))
         {
+            /*
             col.size = new Vector2(col.size.x, ySize);
             col.offset = new Vector2(col.offset.x, newOffset);
-
+            */
             Repair(repairValue);           
         }
 
@@ -87,7 +93,7 @@ public class PlayerController : MonoBehaviour
     public void Repair(int rpr)
     {
         curRepair += rpr;
-        repair = true;
+        repair = true;       
     }
 
     public void Damage(int dmg)
