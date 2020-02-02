@@ -13,6 +13,8 @@ public class ScoreScript : MonoBehaviour
     public Text scoreText;
     private int score;
 
+    public AudioSource moneda;
+
     private void Awake()
     {
         //playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -54,6 +56,7 @@ public class ScoreScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             AddScore(scoreValue);
+            moneda.Play(0);
         }
 
         if (other.gameObject.CompareTag("Ground"))
