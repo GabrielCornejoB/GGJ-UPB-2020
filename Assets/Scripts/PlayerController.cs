@@ -108,6 +108,7 @@ public class PlayerController : MonoBehaviour
 
             anim.SetTrigger("jump");
             audioSalto.Play(0);
+
         }
     }
 
