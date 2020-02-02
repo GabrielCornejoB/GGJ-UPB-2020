@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
             isJumping = true;
 
-            anim.SetTrigger("jump");
+            anim.SetTrigger("Jump");
         }
     }
 
