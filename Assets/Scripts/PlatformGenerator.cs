@@ -37,7 +37,7 @@ public class PlatformGenerator : MonoBehaviour
     //     generator.generationPoint = generationPoint;
     //     generator.stages = stages;
     //   }
-      GameObject currentStage = Instantiate(theStage, transform.position, transform.rotation);
+      GameObject currentStage = Instantiate(nextStage, transform.position, transform.rotation);
       currentStage.GetComponentInChildren<PlatformGenerator>().SetInScene();
     }
   }
