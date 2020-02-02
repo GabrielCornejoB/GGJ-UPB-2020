@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: cf24fa992707f604db85726fd172e7a9
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ROBOT 2 (2)_0
+    21300002: ROBOT 2 (2)_1
+    21300004: ROBOT 2 (2)_2
+    21300006: ROBOT 2 (2)_3
+    21300008: ROBOT 2 (2)_4
+    21300010: ROBOT 2 (2)_5
+    21300012: ROBOT 2 (2)_6
+    21300014: ROBOT 2 (2)_7
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ROBOT 2 (2)_0
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1408
+        width: 521
+        height: 585
+      alignment: 9
+      pivot: {x: 0.4883384, y: 0.9258128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1201eb6623803d9468cdfc415262ce4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROBOT 2 (2)_1
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 1080
+        width: 355
+        height: 280
+      alignment: 9
+      pivot: {x: 0.12918684, y: 0.9122742}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10712b9fc00af4e4b918ac6584f892d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROBOT 2 (2)_2
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 976
+        width: 239
+        height: 358
+      alignment: 9
+      pivot: {x: 0.77115697, y: 0.90164715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d1b44a52a17bf498f96b5b3f168e18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROBOT 2 (2)_3
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 423
+        width: 461
+        height: 558
+      alignment: 9
+      pivot: {x: 0.2872881, y: 0.8964257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c559dcc0edb89be4a81a1df3e634d707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROBOT 2 (2)_4
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 423
+        width: 627
+        height: 529
+      alignment: 9
+      pivot: {x: 0.7982436, y: 0.8362508}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ae62a0a692e3143a428835b6200639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROBOT 2 (2)_5
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 2105
+        width: 793
+        height: 657
+      alignment: 9
+      pivot: {x: 0.54888785, y: 0.02793868}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95238d3e288ba3f49ac615700f1fbfeb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROBOT 2 (2)_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1322
+        width: 739
+        height: 652
+      alignment: 9
+      pivot: {x: 0.94128203, y: 0.8147888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6218820cca4687b45923e1cc39431960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROBOT 2 (2)_7
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 2341
+        width: 711
+        height: 650
+      alignment: 9
+      pivot: {x: 0.057376996, y: 0.17722544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97facc4b5f52bf48941101acd8f7309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5609a0aca9e66cf49ad942fd6ae9774d
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,25 +7,32 @@ public class ScoreScript : MonoBehaviour
 {
     public Rigidbody2D rb;
 
-    public int scoreValue = 10;
-    //public GameController gameController;
+    public int scoreValue = 1;
+    public PlayerController playerController; 
 
     public Text scoreText;
     private int score;
 
-    /*
-    public int curRepair;
-    public int maxRepair = 3;
+    private void Awake()
+    {
+        //playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        playerController = GetComponent<PlayerController>();
 
-    bool repair;
-    */
-
-    void Start()
-    {       
-        //curRepair = 0;
-        score = 0;
     }
 
+    void Start()
+    {              
+        score = 0;
+    }
+    /*
+    void Update()
+    {
+        if (score == 100 || score == 200 || score == 300)
+        {
+            playerController.ChangePlayer();
+        }
+    }
+    */
     public void AddScore(int newScoreValue)
     {
         score += newScoreValue;
@@ -48,12 +55,4 @@ public class ScoreScript : MonoBehaviour
             AddScore(scoreValue);
         }
     }
-    /*
-    public void Repair(int rpr)
-    {
-        curRepair += rpr;
-        repair = true;
-    }
-    */
-
 }

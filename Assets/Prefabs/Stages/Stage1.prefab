@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1765098247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765098248}
+  - component: {fileID: 1765098249}
+  m_Layer: 0
+  m_Name: PlatformGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765098248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765098247}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8903713588210574631}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1765098249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765098247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d16268db105a241b03da645887aa8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theStage: {fileID: 7615611111003255148}
+  generationPoint: {fileID: 0}
 --- !u!1 &7615611111003255148
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,6 +78,7 @@ Transform:
   - {fileID: 2035194508995258638}
   - {fileID: 1323598420987927601}
   - {fileID: 7607553898368508681}
+  - {fileID: 1765098248}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -69,6 +115,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8903713588210574631}
     m_Modifications:
+    - target: {fileID: 6799724225517998, guid: 9e7da710bf337094d8a5df32c7ca9846, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799724225517998, guid: 9e7da710bf337094d8a5df32c7ca9846, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2772343733871108647, guid: 9e7da710bf337094d8a5df32c7ca9846,
         type: 3}
       propertyPath: m_Name
@@ -378,6 +432,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plataforma5x1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563643847164462724, guid: 750bf4613d1f9ac43bbc17fbaaeea156,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7563643847164462727, guid: 750bf4613d1f9ac43bbc17fbaaeea156,
         type: 3}

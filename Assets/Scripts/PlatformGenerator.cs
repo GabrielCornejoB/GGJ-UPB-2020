@@ -9,6 +9,8 @@ public class PlatformGenerator : MonoBehaviour
     public Transform generationPoint;
     // public float distanceBetween;
     private float platformWidth;
+    DestroyByTime _destroyByTime;
+
     private float stageWidth;
 
     // Start is called before the first frame update
@@ -23,7 +25,12 @@ public class PlatformGenerator : MonoBehaviour
     {
         if (transform.position.x < generationPoint.position.x) {
             transform.position = new Vector3(transform.position.x + stageWidth, transform.position.y, transform.position.z);
-            Instantiate(theStage, transform.position, transform.rotation);
+            
+
+            
+            GameObject nextStage = Instantiate(theStage, transform.position, transform.rotation);
+            nextStage.AddComponent<DestroyByTime>();
+            nextStage.GetComponent<DestroyByTime>().lifeTime = 10;
         }
     }
 }

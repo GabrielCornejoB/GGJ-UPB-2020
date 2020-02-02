@@ -51,3 +51,9 @@ TagManager:
   - name: Player
     uniqueID: 2639556071
     locked: 0
+  - name: Obstaculos
+    uniqueID: 4285656281
+    locked: 0
+  - name: Fade
+    uniqueID: 3012599535
+    locked: 0
