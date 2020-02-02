@@ -136,10 +136,8 @@ public class PlayerController : MonoBehaviour
 
     public void ChangePlayer()
     {
-        /* 
-        if (skins.Length < currentSetting)
-            return;
-        */
+        // if (skins.Length < currentSetting)
+        //     return;
         for (int i = 0; i < skins.Length; i++)
         {
             skins[i].SetActive(false);
