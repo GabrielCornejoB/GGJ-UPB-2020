@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         curRepair += rpr;
         repair = true;
 
-        if(gameSettings[currentSetting].pickUpsAmount >= curRepair)
+        if(gameSettings[currentSetting].pickUpsAmount == curRepair)
         {
             ChangePlayer();
         }
@@ -136,8 +136,8 @@ public class PlayerController : MonoBehaviour
 
     public void ChangePlayer()
     {
-        if (skins.Length < currentSetting)
-            return;
+        // if (skins.Length < currentSetting)
+        //     return;
 
         for (int i = 0; i < skins.Length; i++)
         {
