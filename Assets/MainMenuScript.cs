@@ -41,7 +41,7 @@ public class MainMenuScript : MonoBehaviour
     }
     public static void openMarianaCano()
     {
-        GoToSite("");
+        GoToSite("https://www.instagram.com/mariana.cano/");
         
     }
     public static void openAndresCano()
