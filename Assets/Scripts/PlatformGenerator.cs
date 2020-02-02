@@ -30,7 +30,7 @@ public class PlatformGenerator : MonoBehaviour
     {
         if (transform.position.x < generationPoint.position.x)
         {
-            GameObject nextStage = stages[Random.Range(0, stages.Length - 1)];
+            GameObject nextStage = stages[Random.Range(0, stages.Length)];
             transform.position = new Vector3(transform.position.x + stageWidth, transform.position.y, transform.position.z);
             GameObject currentStage = Instantiate(nextStage, transform.position, transform.rotation);
             currentStage.GetComponentInChildren<PlatformGenerator>().SetInScene();
