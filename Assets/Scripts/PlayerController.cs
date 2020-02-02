@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public int repairValue = 1;
     public int damageValue = 1;
 
+    public GameObject repairAnim;
+
     [Header("Skin config")]
     [SerializeField] private GameObject[] skins;
 
@@ -32,6 +34,16 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     private Animator anim;
+
+    public AudioSource audioSource;
+    public AudioSource audioSource2;
+    public AudioSource audioSource3;
+
+    public AudioSource audioSalto;
+    public AudioSource audio1a2;
+    public AudioSource audio2a3;
+
+    public Transform posicionPlayer;
 
     public ScoreScript scoreScript;
 
@@ -50,6 +62,7 @@ public class PlayerController : MonoBehaviour
 
         curRepair = 0;
 
+        
     }
     
     private void Machetazo()
@@ -62,11 +75,24 @@ public class PlayerController : MonoBehaviour
     
     private void Update()
     {
-        rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+        if (curRepair >= 0)
+        {
+            Run();
+        }
+        else
+        {
+            return;
+        }
         //Machetazo();
     }
 
     #endregion
+
+
+    void Run()
+    {
+        rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+    }
 
     private void FixedUpdate()
     {
@@ -81,6 +107,7 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
 
             anim.SetTrigger("jump");
+            audioSalto.Play(0);
         }
     }
 
@@ -114,9 +141,15 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Damage(damageValue);
+            Destroy(collision.gameObject);
         }
     }
-
+    /*
+    public void AnimacionExplosion() 
+    {
+        repairAnim.SetActive(true);
+    }
+    */
     public void Repair(int rpr)
     {
         curRepair += rpr;
@@ -125,6 +158,8 @@ public class PlayerController : MonoBehaviour
         if(gameSettings[currentSetting].pickUpsAmount == curRepair)
         {
             ChangePlayer();
+            GameObject particleSmoke = Instantiate(repairAnim, transform);
+            particleSmoke.transform.localPosition = Vector3.zero;
         }
     }
 
@@ -134,19 +169,57 @@ public class PlayerController : MonoBehaviour
         damaged = true;
     }
 
+    public void Death()
+    {
+        if(curRepair <= 0)
+        {
+
+        }
+    }
+
     public void ChangePlayer()
     {
         // if (skins.Length < currentSetting)
         //     return;
+        int skinId = gameSettings[currentSetting].skinId;
+
         for (int i = 0; i < skins.Length; i++)
         {
             skins[i].SetActive(false);
         }
 
-        skins[gameSettings[currentSetting].skinId].SetActive(true);
-        anim = skins[gameSettings[currentSetting].skinId].GetComponent<Animator>();
+        skins[skinId].SetActive(true);
+        anim = skins[skinId].GetComponent<Animator>();
+        //audioSource = skins[skinId].GetComponent<AudioSource>();
+
+        ConfigigureMusic(skinId);
+
+
 
         currentSetting++;
+    }
+
+    private void ConfigigureMusic(int skinId)
+    {
+        switch (skinId)
+        {
+            case 0:
+                //musica 1
+                //audioSource.mute = false;
+            break;
+            case 1:
+                //musica 2
+                audioSource2.mute = false;
+                audioSource.mute = true;
+                audio1a2.Play(0);                
+
+                break;
+            case 2:
+                audioSource2.mute = true;
+                audioSource3.mute = false;
+                audio2a3.Play(0);
+            break;
+        }
     }
 
 }
@@ -161,5 +234,8 @@ public class GameSettings
     [Tooltip("Numero identificador del skin")]
     [Range(0,2)]
     public int skinId;
+
+
+
 }
 

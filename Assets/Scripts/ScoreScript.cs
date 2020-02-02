@@ -39,6 +39,7 @@ public class ScoreScript : MonoBehaviour
         UpdateScore();
     }
 
+
     //public void SubstractScore(int )
 
     public void UpdateScore()
@@ -52,6 +53,11 @@ public class ScoreScript : MonoBehaviour
         if (other.gameObject.CompareTag("PickUp"))
         {
             Destroy(other.gameObject);
+            AddScore(scoreValue);
+        }
+
+        if (other.gameObject.CompareTag("Ground"))
+        {
             AddScore(scoreValue);
         }
     }
