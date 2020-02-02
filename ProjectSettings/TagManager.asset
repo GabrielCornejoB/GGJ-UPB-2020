@@ -45,14 +45,14 @@ TagManager:
   - name: BackGround
     uniqueID: 562216985
     locked: 0
+  - name: Obstaculos
+    uniqueID: 4285656281
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 2639556071
-    locked: 0
-  - name: Obstaculos
-    uniqueID: 4285656281
     locked: 0
   - name: Fade
     uniqueID: 3012599535

@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         curRepair = 0;
 
     }
-
+    
     private void Machetazo()
     {
         if (curRepair >= 10)
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
             ChangePlayer();
         }
     }
-
+    
     private void Update()
     {
         rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
             isJumping = true;
 
-            anim.SetTrigger("Jump");
+            anim.SetTrigger("jump");
         }
     }
 
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         curRepair += rpr;
         repair = true;
 
-        if(gameSettings[currentSetting].pickUpsAmount >= curRepair)
+        if(gameSettings[currentSetting].pickUpsAmount == curRepair)
         {
             ChangePlayer();
         }
@@ -136,9 +136,10 @@ public class PlayerController : MonoBehaviour
 
     public void ChangePlayer()
     {
+        /* 
         if (skins.Length < currentSetting)
             return;
-
+        */
         for (int i = 0; i < skins.Length; i++)
         {
             skins[i].SetActive(false);
